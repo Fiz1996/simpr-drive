@@ -1,24 +1,44 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+simple_drive/
+│── app/
+│   ├── controllers/
+│   │   ├── application_controller.rb
+│   │   ├── blobs_controller.rb
+│   │
+│   ├── models/
+│   │   ├── blob.rb
+│   │
+│   ├── services/
+│   │   ├── storage_service.rb
+│   │   ├── minio_storage.rb
+│   │   ├── database_storage.rb
+│   │   ├── local_storage.rb
+│   │   ├── ftp_storage.rb
+│
+│── config/
+│   ├── environments/
+│   │   ├── development.rb
+│   │   ├── production.rb
+│   │   ├── test.rb
+│   │
+│   ├── routes.rb
+│   ├── application.rb
+│
+│── db/
+│   ├── migrate/
+│   │   ├── 20250209123456_create_blobs.rb  # Migration for blobs table
+│   ├── schema.rb
+│
+│── spec/
+│   ├── requests/
+│   │   ├── blobs_spec.rb  # API tests
+│
+│── .env  # Environment variables for MinIO and authentication
+│── .gitignore
+│── Gemfile
+│── Gemfile.lock
+│── Rakefile
+│── README.md
+│── config.ru
+│── storage/  # Directory for local file storage (if used)
