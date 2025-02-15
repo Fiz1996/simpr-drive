@@ -1,15 +1,8 @@
 require 'logger'
 
 class StorageService
-    def initialize
-      # @backend = ENV['STORAGE_BACKEND'] || 'local'
-      @backend = 'minio' 
-      @logger = Logger.new(STDOUT)  # Logs to standard output (console)
-      @logger.level = Logger::INFO 
-    end
   
     def store(id, data)
-      @logger.info("Storage backend is: #{@backend}")  # Log the backend type
       case @backend
       when 'minio' then MinioStorage.store(id, data)
       when 'db' then DatabaseStorage.store(id, data)
