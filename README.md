@@ -32,13 +32,13 @@ simple_drive/
 │
 │── spec/
 │   ├── requests/
-│   │   ├── blobs_spec.rb  # API tests
+│   │   ├── blobs_spec.rb  
 │
-│── .env  # Environment variables for MinIO and authentication
+│── .env 
 │── .gitignore
 │── Gemfile
 │── Gemfile.lock
 │── Rakefile
 │── README.md
 │── config.ru
-│── storage/  # Directory for local file storage (if used)
+│── storage/ 
