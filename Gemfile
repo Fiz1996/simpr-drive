@@ -55,7 +55,7 @@ end
 # gem "dotenv", "~> 3.1"
 
 gem "jwt", "~> 2.10"
-gem "aws-sdk-s3", "~> 1.181"
+gem "aws-sdk-s3", "~> 1.182"
 gem "net-ftp", "~> 0.3.8"
 gem "base64", "~> 0.2.0"
 gem "dotenv", "~> 3.1"
